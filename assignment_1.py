@@ -57,8 +57,6 @@ for lvl in levels_list:
 
 
 
-
-
 ## ---------- 2. Average Blur with 3x3, 10x10, 20x20 ----------
 
 # Make output directory
@@ -129,6 +127,7 @@ cv2.imshow("Rotated 45° Clockwise", rotated_45)
 cv2.imshow("Rotated 90° Clockwise", rotated_90)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 
 
 

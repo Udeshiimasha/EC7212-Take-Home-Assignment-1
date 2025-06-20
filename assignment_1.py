@@ -108,20 +108,20 @@ if image is None:
 (h, w) = image.shape[:2]
 center = (w // 2, h // 2)
 
-# ---------- Rotate 45 degrees CLOCKWISE ----------
+# Rotate 45 degrees CLOCKWISE
 # Negative angle = clockwise rotation
 M_45 = cv2.getRotationMatrix2D(center, -45, 1.0)
 rotated_45 = cv2.warpAffine(image, M_45, (w, h))
 
-# ---------- Rotate 90 degrees CLOCKWISE ----------
+# Rotate 90 degrees CLOCKWISE
 rotated_90 = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
 
-# ---------- Save rotated images ----------
+# Save rotated images
 cv2.imwrite("task3_output/original.jpg", image)
 cv2.imwrite("task3_output/rotated_45_clockwise.jpg", rotated_45)
 cv2.imwrite("task3_output/rotated_90_clockwise.jpg", rotated_90)
 
-# ---------- Display for verification ----------
+# Display for verification
 cv2.imshow("Original", image)
 cv2.imshow("Rotated 45° Clockwise", rotated_45)
 cv2.imshow("Rotated 90° Clockwise", rotated_90)
